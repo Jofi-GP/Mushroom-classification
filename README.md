@@ -23,29 +23,29 @@ ________________________________________
 Step 1: Import and Clean the Data  
 1)	Open Power BI Desktop.
 2)	Click Get Data > Text/CSV. Load the dataset.
-3)	Click Transform Data to launch Power Query.
-4)	De-code Categorical Features: The raw data uses single letters (e.g., cap-shape has x for convex, f for flat).
+3)	Click Transform Data to launch Power Query.  
+4)	De-code Categorical Features: The raw data uses single letters (e.g., cap-shape has x for convex, f for flat).  
 a)	Create a new table "TranslationMap" to bulk translate single letter codes with whole words by filtering ColumnName. Follow the code in the original
-Kaggle database description.
+Kaggle database description.  
 b)	Use the Advanced Editor to introduce code to replace all values in one step (used AI to optimize this code)
-6)	Click Close & Apply.
-Step 2: Build the Mycology Data Model (DAX)
-Go to the Report View, click New Measure, and write these expressions to build your performance indicators:
-•	Total Strains = COUNTROWS(mushrooms)
-•	Edible Selection = CALCULATE([Total Strains], mushrooms[class] = "Edible")
-•	Safety Ratio = DIVIDE([Edible Selection], [Total Strains], 0) (Format this measure as a percentage)
-Step 3: Create the Fungi Phenotype Dashboard
-Use an "Earth-toned" color palette (forest greens, rich browns, warm ochres).
-•	Cards: Total Strains, Edible Selection, and Safety Ratio
+6)	Click Close & Apply.  
+Step 2: Build the Mycology Data Model (DAX)  
+Go to the Report View, click New Measure, and write these expressions to build your performance indicators:  
+•	Total Strains = COUNTROWS(mushrooms)  
+•	Edible Selection = CALCULATE([Total Strains], mushrooms[class] = "Edible")  
+•	Safety Ratio = DIVIDE([Edible Selection], [Total Strains], 0) (Format this measure as a percentage)  
+Step 3: Create the Fungi Phenotype Dashboard  
+Use an "Earth-toned" color palette (forest greens, rich browns, warm ochres).  
+•	Cards: Total Strains, Edible Selection, and Safety Ratio  
 •	Matrix Visual: Put cap-color on rows and cap-shape on columns. Drop Total Strains into values and turn on conditional formatting Data Bars to quickly
-highlight the most common biological overlaps.
+highlight the most common biological overlaps.  
 •	Stacked Bar Chart: Place habitat on the Y-axis and Total Strains on the X-axis, using population (the type of fungal organization) as the Legend. 
-•	Place interactive buttons: To select specific habitats where these combinations are found
+•	Place interactive buttons: To select specific habitats where these combinations are found  
 •	Key Influencers AI Visual: Put class as the target variable to analyze, and drag all the columns that you find interesting to analyze into the "Explain By"
  bucket. Power BI will automatically run a back-end regression to tell you exactly which physical trait is the strongest mathematical predictor of the strain's
-class. 
+class.   
 •	Place interactive tables: for fun. I did this by placing a Treemap on habitats, and interactive buttons for odor and spore-print color. Pressing the buttons
-will change combinations and display of habitats where to find mushrooms with those characteristics.
+will change combinations and display of habitats where to find mushrooms with those characteristics.  
 
 ________________________________________
 
