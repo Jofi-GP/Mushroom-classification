@@ -15,9 +15,9 @@ They need an interactive dashboard to map physical phenotypes (cap shapes, gill 
 indicators of specific strains.
 
 Key Metrics to Calculate (DAX)  
-•	Total Specimen Population: Total count of unique samples.
-•	Phenotype Dominance %: Percentage distribution of specific structural traits (e.g., broad vs. narrow gill size).
-•	Attribute Variance Score: Identifying which combinations of cap color and shape correlate with specific classifications.
+•	Total Specimen Population: Total count of unique samples.  
+•	Phenotype Dominance %: Percentage distribution of specific structural traits (e.g., broad vs. narrow gill size).  
+•	Attribute Variance Score: Identifying which combinations of cap color and shape correlate with specific classifications.  
 ________________________________________
 3. Power BI Guidelines: Import to Visualization  
 Step 1: Import and Clean the Data  
