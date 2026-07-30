@@ -9,18 +9,18 @@ Used the comprehensive Kaggle Mushroom Classification Dataset (https://www.kaggl
 While originally built for identifying edibility and made over 10 years ago, its detailed structural and environmental attributes perfectly simulate a biological
 screening dataset. Besides, it is a relatively small for download. Thanks UCI Machine Learning!
 ________________________________________
-2. The Made-up Biotech Problem
+2. The Made-up Biotech Problem  
 Problem Statement: An agritech startup is cultivating specific fungal strains for sustainable biomaterials and meat alternatives.
 They need an interactive dashboard to map physical phenotypes (cap shapes, gill spacing, surface types) against biological classes to isolate the exact morphologic
 indicators of specific strains.
 
-Key Metrics to Calculate (DAX)
+Key Metrics to Calculate (DAX)  
 •	Total Specimen Population: Total count of unique samples.
 •	Phenotype Dominance %: Percentage distribution of specific structural traits (e.g., broad vs. narrow gill size).
 •	Attribute Variance Score: Identifying which combinations of cap color and shape correlate with specific classifications.
 ________________________________________
-3. Power BI Guidelines: Import to Visualization
-Step 1: Import and Clean the Data
+3. Power BI Guidelines: Import to Visualization  
+Step 1: Import and Clean the Data  
 1)	Open Power BI Desktop.
 2)	Click Get Data > Text/CSV. Load the dataset.
 3)	Click Transform Data to launch Power Query.
