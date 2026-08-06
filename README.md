@@ -21,21 +21,18 @@ Key Metrics to Calculate (DAX)
 ________________________________________
 3. Power BI Guidelines: Import to Visualization  
 Step 1: Import and Clean the Data  
-1)	Open Power BI Desktop.
-2)	Click Get Data > Text/CSV. Load the dataset.
-3)	Click Transform Data to launch Power Query.  
-4)	De-code Categorical Features: The raw data uses single letters (e.g., cap-shape has x for convex, f for flat).  
-a)	Create a new table "TranslationMap" to bulk translate single letter codes with whole words by filtering ColumnName. Follow the code in the original
+1)	Downloaded the kaggle dataset as a .csv file.
+2)	Once imported in Power BI, launched Power Query to transform data.  
+4)	De-coding categorical features: The raw data uses single letters (e.g., cap-shape has x for convex, f for flat).  
+a)	Created a new table "TranslationMap" to bulk translate single letter codes with whole words by filtering ColumnName. Follow the code in the original
 Kaggle database description.  
-b)	Use the Advanced Editor to introduce code to replace all values in one step (used AI to optimize this code)
-6)	Click Close & Apply.  
+b)	Used the Advanced Editor to introduce code to replace all values in one step (used AI to optimize this code).  
 Step 2: Build the Mycology Data Model (DAX)  
-Go to the Report View, click New Measure, and write these expressions to build your performance indicators:  
+Added New Measures to the dataset:  
 •	Total Strains = COUNTROWS(mushrooms)  
 •	Edible Selection = CALCULATE([Total Strains], mushrooms[class] = "Edible")  
 •	Safety Ratio = DIVIDE([Edible Selection], [Total Strains], 0) (Format this measure as a percentage)  
-Step 3: Create the Fungi Phenotype Dashboard  
-Use an "Earth-toned" color palette (forest greens, rich browns, warm ochres).  
+Step 3: Created the Fungi Phenotype Dashboard  
 •	Cards: Total Strains, Edible Selection, and Safety Ratio  
 •	Matrix Visual: Put cap-color on rows and cap-shape on columns. Drop Total Strains into values and turn on conditional formatting Data Bars to quickly
 highlight the most common biological overlaps.  
